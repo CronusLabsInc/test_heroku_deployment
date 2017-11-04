@@ -11,6 +11,7 @@ def index(request):
     return HttpResponse('<pre>' + r.text + '</pre>')
 
 def jar(request):
+	print('hit the jar endoint')
 	return HttpResponse('<pre>' + 'hello world' + '</pre>')
 
 
