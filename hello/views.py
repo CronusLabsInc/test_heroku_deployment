@@ -15,7 +15,7 @@ def index(request):
 def jar(request):
 	print('hit the jar endoint')
 	print(os.getcwd())
-	subprocess.call(['java', '-jar', '../java/hello-world.jar'])
+	subprocess.call(['java', '-jar', 'app/java/hello-world.jar'])
 	return HttpResponse('<pre>' + 'hello world' + '</pre>')
 
 
