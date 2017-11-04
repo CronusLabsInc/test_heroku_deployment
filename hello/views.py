@@ -1,4 +1,6 @@
 import requests
+import subprocess
+import os
 from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -12,6 +14,8 @@ def index(request):
 
 def jar(request):
 	print('hit the jar endoint')
+	print(os.getcwd())
+	subprocess.call(['java', '-jar', '../java/hello-world.jar'])
 	return HttpResponse('<pre>' + 'hello world' + '</pre>')
 
 
