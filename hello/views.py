@@ -10,6 +10,9 @@ def index(request):
     print(r.text)
     return HttpResponse('<pre>' + r.text + '</pre>')
 
+def jar(request):
+	return HttpResponse('<pre>' + 'hello world' + '</pre>')
+
 
 def db(request):
 
