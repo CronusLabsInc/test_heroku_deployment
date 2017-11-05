@@ -13,10 +13,10 @@ def index(request):
     return HttpResponse('<pre>' + r.text + '</pre>')
 
 def jar(request):
-	print('hit the jar endoint')
-	print(os.getcwd())
-	subprocess.run('java -jar /app/java/hello-world.jar', shell=True)
-	return HttpResponse('<pre>' + 'hello world' + '</pre>')
+    print('hit the jar endpoint')
+    print(os.getcwd())
+    subprocess.run('java -jar /app/java/barnacle-1.0-SNAPSHOT-jar-with-dependencies.jar', shell=True)
+    return HttpResponse('<pre>' + 'hello world' + '</pre>')
 
 
 def db(request):
